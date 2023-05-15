@@ -6,7 +6,7 @@ let amqplibConnection = null;
 const getChannel = async () => {
   if (amqplibConnection === null) {
     amqplibConnection = await amqplib.connect(
-      "amqps://kwlfgjtd:ODfX3OHudczcVKSFZQjIzLft3Z450AIm@puffin.rmq2.cloudamqp.com/kwlfgjtd"
+      "amqps:/localhost"
     );
   }
   return await amqplibConnection.createChannel();
