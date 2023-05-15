@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_rpc_rmq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "customer": "nodemon src/customer.js",
+    "product": "nodemon src/product.js",
+    "start": "concurrently --kill-others \"npm run customer\" \"npm run product\""
+  },
+  "author": "JOy",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
+  }
+}
